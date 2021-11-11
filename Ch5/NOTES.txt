@@ -1,0 +1,43 @@
+Chapter 5 - Pointer snd Arrays.
+
+	- pointer is a variable that holds the address to another variable
+
+5.1 Pointer and addresses
+    - pointer is a group of cells that can hold an address
+    - & operator gives the address of an object
+    - * is the indirection/derefencing operator, applied to a pointer it gives the value/object the pointer points to
+    - can incremement/decrement pointers (pointer arithmetic)
+    - ++*ip increments whatever ip points to
+    - (*ip)++ also increments (need paranth)
+    - pointer can equal each other
+      ip = iq makes ip point to whatever iq is pointing at
+
+5.2 Pointers and Function Arguments
+    - C is a call by value language, functions canot change their parameters
+    - need pointers to the parameters to enable functions to alter given input
+    - int a[10]; declared an array of 10 ints
+    - int *pa = &a[0] point to the object stored in a[0]
+    - x = *pa; puts whatever is in a[0] into x.
+    - indexing and pointer arithmetic are very similar
+    - array addresses are always at their 0th element
+    - a[i] can also be written as *(a+i)
+    - &a[i] and a+i are equivalent
+    - array-and-index expression is equivalent to a pointer-offset expression
+    - pointers are variables, arrays arent, pointers can use ++ operators
+    - char *s; and char s[]; are equivalent
+
+5.4 address arithmetic
+    - can incremement pointers to new objects
+    - pointers, arrays, address arithmetic are one of C's strengths
+    - pointers and integers arent interchangeable
+    - NULL is defined in stdio.h, used to indicate a special value for a pointer
+    - can use comparison operators on pointers if they point to the same array
+    - if p<q, q-p+1 is the number of elements from p to q inclusive
+    - stddef.h library has a type ptrdiff_t, large enough to hold the signed difference of two pointer values
+    - size_t, unsigned integer type returned by the sizeof operator
+
+5.5 Character Pointers & Functions
+    - string constant "I am a string" is an array of characters
+    - character arrays are terminated by '\0' (null chaarcter)
+    - character array lengths are always 1 more than they are (due to terminator character at end)
+    - 

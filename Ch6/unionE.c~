@@ -1,0 +1,8 @@
+
+union u_tag {
+  int ival;
+  float fval;
+  char *sval;
+} u;
+
+/* variable u is the size of the largest type, can hold any of these types! */

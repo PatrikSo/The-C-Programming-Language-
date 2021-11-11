@@ -1,0 +1,76 @@
+Chapter 7 - Input and Output.
+
+	- Headers are part of the main language of C but are useful!
+
+7.1 Standard Input and Output
+    - input and output are of text streams
+    - streams are made up of lines
+    - Every line ends in a newline character '\n'
+    - most simple input, getting a single character at a time using getchar (part of stdio.h)
+    - < is used to redirect input to a file
+    - prog <infile will put file into program prog
+    - input switching is invisible!
+    - otherprog | prog runs both programs at once, pipes standard output of otherprog into prog
+    - putchar is simple output
+    - prog >outfile will put output into outfile
+    - most programs only use one stream at a time (getchar, putchar and printf are enough!)
+
+7.2 Formatted Output-Printf
+    - printf converts internal values into characters
+    - printf has 2 objects in its format, regular characters and conversion specifications
+    - conversion specifications begin with % and use the arguments provided to put them into character output
+    - table of conversions on pg 168 of PDF
+    - sprintf() is the same as printf but saves the output into a string
+
+7.3 Variable-length Argument Lists
+    - simplified printf example
+
+7.4 Formatted Input-Scanf
+    - scanf is the input analog of printf
+    - scanf arguments have to be pointers!
+    - sscanf reads from a string instead of the standard input
+    - scanf has a format string section which is exactly like printf, but we are saving the inputs
+    - pg 172 PDF has good table for input conversions
+    - sscanf and scanf need pointer arguments!!
+
+7.5 File Access
+    - cat command is used to print a file onto the output
+    - cat x.c y.c prints the contents of foles x.c and y.c onto the standard output
+    - files have to be opened before anything
+    - fopen opens a file
+    - fopen returns a file-pointer, points to a structure that contains info about the file
+    - FILE *fp;
+    - FILE *fopen(char *name, char *mode);
+    - fp = fopen(name, mode); is to use the pointer!
+    - fopen's first argument is the file name, second argument is the mode indicating how the file will be used
+    - "r" read mode
+    - "w" for write mode
+    - "a" for append mode
+    - any error, fopen returns NULL
+    - getc() and putc() are the simplest input/output for a file
+    - getc(FILE *fp) returns a single character at a time from a file
+    - getc() returns EOF for end of file or error
+    - putc(int c, FILE *fp) puts the character c into the file fp
+    - Everytime a program runs, 3 files are made (stdin, stdout, stderr. declared in <stdio.h>
+    - stdin is connected to the keyboard, stdout and stderr are connected to the screen
+    - stdout and stdin can be redirected to files or pipes
+    - fscanf anf fprintf for formatted input/output for files can be used
+    - fclose() is the inverse of fopen()
+    - fclose() frees the file pointer from the file it points to
+
+7.6 Error Handling - Stderr and Exit
+    - stderr in files is used for error handling
+    - copy of sCat.c but with sterr
+
+7.7 Line Input and Output
+    - fgets() gets a newline from the file
+    - fgets() returns line which is the linesize
+    - fputs() writes an entire string into a file
+    - gets() deletes '\n' while puts() adds it
+
+7.8 Miscellaneous Functions.
+    - list of many functions rpovided in libraries (pg 180 of PDF)
+    - system(char *s); executes the command in string s and resumes program
+    - malloc returns pointer address of newspace and calloc returns pointer address for specified type address (initializes items to 0)
+
+

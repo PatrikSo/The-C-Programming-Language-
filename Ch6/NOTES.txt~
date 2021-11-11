@@ -1,0 +1,48 @@
+Chapter 6 - Structures.
+
+	- Structure is a collection of one or more variables, could be of different types, group as a single name.
+
+6.1 Basics of Structures
+    - keyword struct introduces a structure declaration
+    - structure tag is placed at the end of a struct, name of structure
+    - members: variables named in a structure
+    - structure-name.member is used to reference a member
+    - '.' is the structure member operator
+
+6.2 Structures and Functions
+    - three approaches for using structs with functions
+      Passing components (members)
+      passing pointers
+      passing the whole structure
+    - if *pp points to a strcture (struct point *pp) then (*pp).x and (*pp.y) are its members
+    - pointers with structures are very commonly used
+    - p->member-of-structure where p is a pointer to a structure and its refering to a particular member
+
+6.3 Arrays of Structures
+    - initializing array of struct members can be done so in a list fasion
+    - sizeof(object) returns the size of the object
+
+6.4 Pointers to Structures
+    - structs can have memory holes (char (1 byte) and a int (4 bytes) in a struct can equal 8 bytes of memory
+    - sizeof will return the structs proper size (8)
+
+6.5 Self-referential Structures
+    - can use a binary tree to organize words as they come in through input
+
+6.6 Table Lookup
+    - table-lookup packages are used for macro's to replace text with macro definition
+    - install(s,t) puts macro items in table, lookup(s) finds the macro words and switches their pointers
+    - unsigned arithmetic ensures positive numbers
+
+6.7 Typedef
+    - typedef is used to create new data type names
+    - typedef (type) (name)
+    - two reasons for using typedef
+      protability issues: if parameters are machine dependent, we only need to change the typedef and not the type for every variable.
+      better documentation: bett understanding for programs
+
+6.8 Unions
+    - unions are variables that hold different objects with varying sizes
+    - Way to manipulate different kinds of data in a single area of storage
+    - members are accessed via: union-name.member or union-pointer->member
+    - 

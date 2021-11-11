@@ -1,0 +1,18 @@
+Chapter 8 - UNIX System Interface
+
+	- UNIX has system calls, used by programs.
+
+8.1 File Descriptors
+    - all input/output is done by reading/writing files (for UNIX)
+    - when input/output is done on a file, file descriptor is used instead of the name to identify a file
+
+8.2 Low Level I/O - Read & Write
+    - used for functions such as fget() and fput()
+
+8.3 Open, Creat, Close, Unlink
+    - need to explicitly open files to read/write them
+    - need two system calls, open & creat[sic]
+    - open is like fopen but instead of returning file-pointer we get a file descriptor
+    - file descriptors are int's
+    - creat makes a file if it doesnt already exist
+    - 

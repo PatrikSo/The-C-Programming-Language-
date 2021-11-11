@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() /*lower: convert input to lower case*/
+{
+  int c;
+
+  while ((c = getchar()) != EPF)
+    putchar(tolower(c));
+  return 0;
+}
+
+/* tolower() is defined in ctype.h*/
