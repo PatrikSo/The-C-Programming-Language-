@@ -2,6 +2,8 @@
 PERSONAL NOTES from the book 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie.<br />
 These notes are mostly personal and here to show I did some C programming! Many programs are examples from the book and some personal items. <br />
 
+I used a Linux UBUNTU Virtual Machine to do this work! Made these files using emacs in the command line. <br />
+
 **Chapters**<br />
 CH1: Basics [Variables, Arrays, Functions, Control Statements, Scope], <br />
 Ch2: Types, Operators, Expressions [Data Types, Declarations, Operators, Casts], <br />
