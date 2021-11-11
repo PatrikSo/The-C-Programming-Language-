@@ -2,7 +2,7 @@
 PERSONAL NOTES from the book 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie.<br />
 These notes are mostly personal and here to show I did some C programming! Many programs are examples from the book and some personal items. <br />
 
-**Chapters**
+**Chapters**<br />
 CH1: Basics [Variables, Arrays, Functions, Control Statements, Scope], <br />
 Ch2: Types, Operators, Expressions [Data Types, Declarations, Operators, Casts], <br />
 Ch3: Control Flow [If,Else, Else-if,Loops (While, For, Do-While), Sequence Changers], <br />
