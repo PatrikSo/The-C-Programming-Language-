@@ -1,0 +1,75 @@
+Chapter 4 - Functions and Program Structure
+
+4.1 Basics of Functions
+    - patternString.c
+    - source.c is a source file
+    - source.o is a object file
+    - a.out is a executable file
+    - undefined functions are of type int by default
+    
+4.2 Functions returning non-integers
+    - atof.c
+    - functions should always have a visible definition!
+
+4.3 External Variables
+    - avoid static!! (cse3100 warnings)
+    - external linkage: all references to externals all refer to the same thing (same external)
+    - functions are external by default
+    - can decalre external variables to be used throughout program
+    - reverse polish notation is used by some pocket calculators, example in text!
+
+4.4 Scope Rules
+    - scope of a name (of a file) is the area in which that file can be referenced.
+    - external scopes start from where the external is defined to the end compilation of the program.
+    - if extern's are used before they are defined or if it was defined in a different source file, you need to declare 'extern' before the item
+    - declaration of a extern announces its properties
+    - definiton of a extern declares the extern and sets memory aside for it.
+
+4.5 Header Files
+    - header files end in a .h
+    - pg 96 in PDF, good example of how to organize a program with several source files.
+    - header file is used to share data between programs/source files
+    - for larger programs, several headers may be needed
+
+4.6 Static Variables
+    - static can be applied to a extern variable, limiting it to only the current rpograms usage throughout the program
+    - static applied to a extern variable limits its scope
+    - external static is useful for hiding variables that need to be shared
+
+4.7 Register Variables
+    - register declaration tells compiler that the variable with it will be heavily used
+    - register variables result in smaller/faster programs
+    - register can only be applied to automatic variables or formal function parameters
+
+4.8 Block Structure
+    - C isnt a block-structured language
+    - functions cant be defined in other functions
+    - C does support compound statements however!
+    - blocks hold the scope of their internal functions/variables
+
+4.9 Initialization
+    - external and static are initialized to 0
+    - automatic and register are initialized to garbage values
+    - scalar variables can be initialized when they are defined
+
+4.10 Recursion
+    - C supports recursion
+    - reverse.c example on p.g 101 of PDF
+    - quicksort using recursion example
+
+4.11 C PreProcessor
+    - PreProcessor is a seperate first step compilation
+    - most common features are #define and #include which we have been using
+    - #include can include files! (#include "filename")
+    - or #include <filename>
+    - #include with  a file name looks for the file in the source folder first, if used <> it will look elsewhere as well!
+    - macro substitution is also used here!
+    - #define name replacement-text   replaces all occurences of name by replacement-text in he program! (Macro)
+    - functions in stdio.h and ctype.h are decalred as macros to prevent function overhead!
+    - #undef is used to ensure the item is a function and not a macro
+    - conditional inclusion lets you define a process flow for the preprocessor itself!
+    - conditional inclusion lets the program selects parts of itself depending on the input given
+    - #if,#elif,#endif are used to define preprocessor process flows
+    - good example on pg.105 of PDF
+
+

@@ -1,0 +1,70 @@
+CH1 - A Tutorial Introduction
+
+1.1 Getting Started
+    - Getting enough info to write small programs!
+    - hello world program.
+    - functions contain statements
+    - variables store values used during computation
+    - #include <stdio.>h is the standard library
+    - arguments are a list of values to be called on
+    - "...." is a character string, or string constant
+    - '\n' is the newline character
+    - '\t' for tab
+    - '\b' for backspace
+    - '\"' for double quote
+    - '\\' for backslash
+
+1.2 Variables and Arithmetic Expressions
+    - Fahrenheit-Celsius program
+    - Assignment statements (lower = 0;)
+    - can format in prinf(); using % and types (like %d for ints)
+    - %6.2f prints a float 6 points wide and 2 decimal points long
+    - %o for octal
+    - %x for hexadecimal
+    - %c for chaarcter
+    - %s for character string
+    - %% for % itself
+    - For loops: for(start; end; step)
+      - (initialization; test/condition; increment step)
+1.4 Symbolic Constants
+    - Bad practice to bury "magic numbers" in code
+      - in fahrenheit conversion examples we put the full calculation right into the assignments, we should use macros!
+    - #define lets you define symbolic names
+      - (Symbolic constant)
+      - #define {nam}e {replacement text}
+1.5 Character Input and Output
+    - text stream: sequence of characters divided into lines
+    - Text input and output is handled vis streams
+    - getchar reads the next input character (one) from a tet stream
+      - c = getchar() assigns a character from the stream to c
+    - putchar(c) places a character each time it is called
+    - putchar and printf may be interleaved
+    - read a character program.
+    - EOF is an integer defined in stdio.h
+      - predefined symbolic constant! (MACRO)
+    - ++i is prefix incrementaton
+    - i++ is postfix incrementation
+    - null statement: ';'
+      - semicolons alone in a line
+    - || is or in c.
+    - && is and in c.
+    - in if-else statement, only one statement ever runs, whichever is true first
+1.6 Arrays
+    - To test getchar() programs do the ./{name} <<< "string to test"
+    - declare an array like: digit[10]
+1.7 Functions
+    - functions encapsulate some computation
+    - funtion setup:   return-type function-name(parameter declarations, if any)
+    {
+	decalrations
+	return
+    }
+1.8 Call by Value
+    - C has a call-by-value approach to parameters
+       - unlike other languages that use call-by-reference
+    - Function is given variable values in temporary place-holder variables instead of referencing original variable in parameter call
+    - c functions cannot alter the original variable called in by the parameter
+    - functions can change original variable called by parameter, need the address (pointer)
+1.9 Character Arrays
+    - most common array in c
+    - 

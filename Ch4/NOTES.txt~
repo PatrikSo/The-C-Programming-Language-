@@ -1,0 +1,20 @@
+Chapter 4 - Functions and Program Structure
+
+4.1 Basics of Functions
+    - patternString.c
+    - source.c is a source file
+    - source.o is a object file
+    - a.out is a executable file
+    - undefined functions are of type int by default
+    
+4.2 Functions returning non-integers
+    - atof.c
+    - functions should always have a visible definition!
+
+4.3 External Variables
+    - avoid static!! (cse3100 warnings)
+    - external linkage: all references to externals all refer to the same thing (same external)
+    - functions are external by default
+    - can decalre external variables to be used throughout program
+    - reverse polish notation is used by some pocket calculators, example in text!
+    - 

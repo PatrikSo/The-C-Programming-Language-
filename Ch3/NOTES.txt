@@ -1,0 +1,22 @@
+Chapter 3 - Control Flow
+
+3.1 Statements and Blocks
+    - statement: expression ending in a semicolon
+    - ; is a statement terminator
+    - {} are used to group declarations and statements together
+    - compound statement: statements/decalrations between {}
+      same thing as a block
+3.2 If-Else
+    - if (expression) can be written instead of if(expression != 0)
+    - else is optional!
+    - {} in if-else statements can be used for less ambiguity
+3.3 Else-If
+    - else if used to write multi-way decision
+    - if one else if is true in a chain, the whole thing terminates after that expression finishes
+3.4 Switch
+    - used for multi-way decisions
+    - tests for cases and gives out the statement to whichever statements are true
+    - break statement causes an immediate exit from the switch
+    - use breaks to get single statement from switch
+    - breaks can be used in loops too!
+    

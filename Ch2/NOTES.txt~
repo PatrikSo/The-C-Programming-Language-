@@ -1,0 +1,90 @@
+Chapter 2 - Types, Operators, and Expressions.
+
+2.1 Variable names
+    - names made up of characters and digits
+    - first letter must be a character
+    - lowercase for variable names
+    - uppercase for symbolic constants
+2.2 Data Types and Sizes
+    - Only a few basic datatypes in C:
+      char: single byte, one character
+      int: integer, reflects natural integer size on machine
+      float: single-precision floating point
+      double: double-precision floating point
+    - Additional qualifiers that are applied to basic data types
+      short and long apply to integers
+2.3 Constants
+    - Integer that is too long gets set as long automatically
+    - can save constants as hex o octal
+    - set of escape sequences:
+      \a alert bell
+      \b backspace
+      \f formfeed
+      \n newline
+      \r carriage return
+      \horizontal tab
+      \v vertical tab
+      \\ backslash
+      \? question mark
+      \' single quote
+      \" double quote
+      \ooo octal number
+      \xhh hexadecimal number
+    - '\0' is the null character
+    - constant expression: expression with only constants
+    - string constant (string literal): sequence of zero or more characters surounded by double-quotes
+    - strlen(s) returns string s's size
+    - <string.h> is the header that has many helpful string functions
+    - 'x' is a character constant
+    - "x" is a string constant
+    - character constants are themselves numbers but string constants are arrays ending with '\0'
+      - "x" is of array length 2 as x and \0 are in that constant
+    - enumeration constant: list of constant integer values
+    - Example enumeration constant:
+      enum boolean { NO, YES };
+      First value in enum has the value of 0, next has 1, so on
+      Can give explicit values (instead of starting at 0)
+    - Enumerations provide a convenient way to associate numbers and names
+2.4 Declarations
+    - all variables must be declared before use
+    - declarations are of a type and can be listed
+    - const makes it so variables or arrays cant be altered
+2.5 Arithmetic Operators
+    - Modulo % cannot be applied to float or double
+    - + and - have lower precedence than / or *
+    - Arithmetic operators associate left to right
+2.6 Relational and Logical Operators
+    - >,<,>=,>= are the relational operators
+    - == != equality operators (lower in precedence)
+    - relational operators have lower precedence than arithmetic ones
+    - && and || are logical operators
+      - evaluated left to right
+    - && precedence is higher than ||, both lower than relation & equality operators
+    - 1 is true, 0 is false (in relations)
+    - ! negation converts nonzero operands into 0, vice versa
+2.7 Type Conversions
+    - operands of different types result in whichever operand is larger
+    - atoi.c
+    - <ctype.h> header provides more functions for conversions
+      such as tolower(c) returns the lowercase value of c
+      and isdigit(c) returns true (non-zero) if character is a digit
+    - 1 if true, 0 if false
+    - if, while, for , so on only need a non-zero digit for a true case
+    - with no unsigned operators, conversion rules follow:
+      either is long double, conver other to long double
+      either operand is double, convert other to double
+      either operand is float, convert other to float
+      otherwise convert char and short to int
+      if either operand is long, convert other to long
+    - <math.h> is the C math header/library
+    - conversions take place across assignments
+      value of right side is converted to type of the left (which is also the result)
+    - casts allow explicit conversions
+      (type-name) expression
+    - casts don't affect original variable, only results in changed one
+2.8 Increment and Decrement Operators
+    - ++ adds 1
+    - -- takes away 1
+    - both can be post or pre-fixed
+2.9 Bitwise Operators
+    - 
